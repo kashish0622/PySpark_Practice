@@ -10,3 +10,12 @@ spark = SparkSession.builder \
 
 print("Spark Session Created Successfully")
 
+from pyspark.sql import SparkSession
+
+# Creating SparkSession
+spark = SparkSession.builder \
+    .appName("MySparkApplication") \
+    .getOrCreate()
+
+# Display Spark version
+print("Spark Version:", spark.version)
