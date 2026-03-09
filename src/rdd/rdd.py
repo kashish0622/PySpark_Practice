@@ -26,7 +26,6 @@ def create_DataFrame():
     return spark, df
 
 spark, df = create_DataFrame()
-df.show()
 
 rdd = df.rdd
 print("RDD Data is: ")
