@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
-    .appName("DataEngineeringApp") \
+    .appName("PySpark Practice") \
     .master("local[*]") \
     .config("spark.executor.memory", "2g") \
     .config("spark.driver.memory", "1g") \
@@ -14,7 +14,7 @@ from pyspark.sql import SparkSession
 
 # Creating SparkSession
 spark = SparkSession.builder \
-    .appName("MySparkApplication") \
+    .appName("PySpark Practice") \
     .getOrCreate()
 
 # Display Spark version
