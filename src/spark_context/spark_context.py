@@ -2,7 +2,7 @@ from pyspark import SparkConf, SparkContext
 
 # Create Spark configuration
 conf = SparkConf() \
-    .setAppName("MySparkApplication") \
+    .setAppName("PySpark Practice") \
     .setMaster("local[*]") \
     .set("spark.executor.memory", "2g") \
     .set("spark.driver.memory", "1g")
