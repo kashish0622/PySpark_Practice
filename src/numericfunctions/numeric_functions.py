@@ -25,4 +25,8 @@ columns = ["order_id","product","price","quantity","discount","profit"]
 
 df = spark.createDataFrame(data, columns)
 
-df.show()
+#df.show()
+#df.select(sum("price")).show()
+#df.select(avg("discount")).show()
+df.select(min("profit"))
+
