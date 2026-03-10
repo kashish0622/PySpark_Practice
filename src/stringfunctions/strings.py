@@ -29,8 +29,14 @@ df.show(truncate=False)
 #df.select(upper("name")).show()
 #df.select(trim("name")).show(truncate=False)
 #df.select(lower("city")).show(truncate=False)
-df.select("name", ltrim("name")).show()
-df.select("name", rtrim("name")).show()
+#df.select("name", ltrim("name")).show()
+#df.select("name", rtrim("name")).show()
+df.select(initcap("name")).show()
+df.select(initcap("city")).show()
+df.select(initcap("review")).show()
+
+
+
 
 
 
