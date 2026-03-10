@@ -19,3 +19,5 @@ data = [
 ]
 
 columns = ["order_id","customer_name","product","category","quantity","price","city","order_date"]
+
+df = spark.createDataFrame(data, schema=columns)
