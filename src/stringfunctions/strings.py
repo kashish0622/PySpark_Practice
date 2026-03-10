@@ -35,6 +35,7 @@ df.show(truncate=False)
 #df.select(initcap("city")).show()
 #df.select(initcap("review")).show()
 #df.select(length("email")).show()
+df.select(substring("review",1,5).alias("review in one line")).show()
 
 
 
