@@ -26,19 +26,20 @@ columns = ["customer_id","name","city","email","product","review"]
 df = spark.createDataFrame(data, columns)
 df.show(truncate=False)
 
-#df.select(upper("name")).show()
-#df.select(trim("name")).show(truncate=False)
-#df.select(lower("city")).show(truncate=False)
-#df.select("name", ltrim("name")).show()
-#df.select("name", rtrim("name")).show()
-#df.select(initcap("name")).show()
-#df.select(initcap("city")).show()
-#df.select(initcap("review")).show()
-#df.select(length("email")).show()
-#df.select(substring("review",1,5).alias("review in one line")).show()
-#df.select(substring_index("email","@",1).alias("username")).show()
-#df.select(split("name"," ").alias("name_splitted")).show(truncate=False)
-
+df.select(upper("name")).show()
+df.select(trim("name")).show(truncate=False)
+df.select(lower("city")).show(truncate=False)
+df.select("name", ltrim("name")).show()
+df.select("name", rtrim("name")).show()
+df.select(initcap("name")).show()
+df.select(initcap("city")).show()
+df.select(initcap("review")).show()
+df.select(length("email")).show()
+df.select(substring("review",1,5).alias("review in one line")).show()
+df.select(substring_index("email","@",1).alias("username")).show()
+df.select(split("name"," ").alias("name_splitted")).show(truncate=False)
+df.select(regexp_replace("name", " ", "").alias("joint_name")).show()
+df.select(instr("review"," ").alias("position")).show()
 
 
 
