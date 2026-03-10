@@ -22,3 +22,4 @@ columns = ["order_id","customer_name","product","category","quantity","price","c
 
 df = spark.createDataFrame(data, schema=columns)
 print(df.collect())
+df.show()
