@@ -30,4 +30,6 @@ df = spark.createDataFrame(data, columns)
 #df.select(avg("discount")).show()
 #df.select(min("profit")).show()
 #df.select(max("profit")).show()
+#df.select(round("discount")).show()
+df.select(abs("profit")).show()
 
