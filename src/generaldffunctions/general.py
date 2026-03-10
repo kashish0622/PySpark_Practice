@@ -18,6 +18,7 @@ data = [
 (110,"Sneha Patel","Sunglasses","Accessories",3,1200,"Ahmedabad")
 ]
 
-columns = ["order_id","customer_name","product","category","quantity","price","city","order_date"]
+columns = ["order_id","customer_name","product","category","quantity","price","city"]
 
 df = spark.createDataFrame(data, schema=columns)
+print(df.collect())
