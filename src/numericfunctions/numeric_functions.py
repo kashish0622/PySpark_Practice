@@ -28,5 +28,6 @@ df = spark.createDataFrame(data, columns)
 #df.show()
 #df.select(sum("price")).show()
 #df.select(avg("discount")).show()
-df.select(min("profit"))
+#df.select(min("profit")).show()
+#df.select(max("profit")).show()
 
