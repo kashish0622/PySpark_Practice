@@ -23,7 +23,7 @@ df.cache()
 #df.select(current_date()).show()
 #df.select(current_timestamp()).show(truncate=False)
 #df.select("name", year("login_time").alias("year")).show()
-df.select()
+df.select("name", month("login_time").alias("month")).show()
 
 
 
