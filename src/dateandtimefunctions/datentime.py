@@ -20,6 +20,7 @@ columns = ["id", "name", "login_time"]
 df = spark.createDataFrame(data, columns)
 df.cache()
 #df.select(current_time()).show()
-df.select(current_date()).show()
+#df.select(current_date()).show()
+df.select(current_timestamp()).show(truncate=False)
 
 
