@@ -1,12 +1,12 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
-spark = SparkSession.builder.appName("NumericFunctions")\
+spark = SparkSession.builder.appName("AggregateFunctions")\
     .master("local[*]")\
     .config("spark.driver.memory","3g")\
     .config("spark.executor.memory","2g")\
     .config("spark.executors.cores", "2")\
     .getOrCreate()
-print("SparkSession created for numeric functions")
+print("SparkSession created for aggregate functions")
 
 data = [
     (101, "Ayush", "IT", 50000),
@@ -20,4 +20,5 @@ columns = ["emp_id", "name", "department", "salary"]
 
 df = spark.createDataFrame(data, columns)
 df.cache()
-df.select(mean("salary")).show()
+#df.select(mean("salary")).show()
+df.select(avg("salary")).show()
