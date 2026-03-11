@@ -38,3 +38,13 @@ df.withColumn(
     "dense_rank",
     dense_rank().over(window_spec)
 ).show()
+
+df.withColumn(
+    "next_salary",
+    lead("salary", 1).over(window_spec)
+).show()
+
+df.withColumn(
+    "previous_salary",
+    lag("salary", 1).over(window_spec)
+).show()
