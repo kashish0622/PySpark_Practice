@@ -10,3 +10,4 @@ spark = SparkSession.builder.appName("WindowFunctions")\
     .getOrCreate()
 print("SparkSession created for window functions")
 
+window_spec = Window.partitionBy("department").orderBy(desc("salary"))
