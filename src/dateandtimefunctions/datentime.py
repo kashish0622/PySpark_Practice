@@ -18,5 +18,8 @@ data = [
 columns = ["id", "name", "login_time"]
 
 df = spark.createDataFrame(data, columns)
-df.select(current_time()).show()
+df.cache()
+#df.select(current_time()).show()
+df.select(current_date()).show()
+
 
