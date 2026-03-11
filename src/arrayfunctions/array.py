@@ -20,7 +20,7 @@ columns = ["emp_id", "name", "skill_set1", "skill_set2", "skill_set3"]
 
 df = spark.createDataFrame(data, columns)
 df.cache()
-#df.select(array(col("skill_set1"),col("skill_set2")).alias("skills")).show()
+df.select(array(col("skill_set1"),col("skill_set2")).alias("skills")).show()
 df.select(
     "name",
     array_contains(
