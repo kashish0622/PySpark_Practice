@@ -28,3 +28,13 @@ df.withColumn(
     "row_number",
     row_number().over(window_spec)
 ).show()
+
+df.withColumn(
+    "rank",
+    rank().over(window_spec)
+).show()
+
+df.withColumn(
+    "dense_rank",
+    dense_rank().over(window_spec)
+).show()
