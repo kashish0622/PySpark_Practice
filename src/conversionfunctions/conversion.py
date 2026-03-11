@@ -20,3 +20,4 @@ columns = ["emp_id", "name", "age_string", "salary_string"]
 
 df = spark.createDataFrame(data, columns)
 df.cache()
+df.select("name", col("age_string").cast("int").alias("age")).show()
