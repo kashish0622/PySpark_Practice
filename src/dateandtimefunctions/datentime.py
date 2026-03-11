@@ -21,6 +21,9 @@ df = spark.createDataFrame(data, columns)
 df.cache()
 #df.select(current_time()).show()
 #df.select(current_date()).show()
-df.select(current_timestamp()).show(truncate=False)
+#df.select(current_timestamp()).show(truncate=False)
+#df.select("name", year("login_time").alias("year")).show()
+df.select()
+
 
 
