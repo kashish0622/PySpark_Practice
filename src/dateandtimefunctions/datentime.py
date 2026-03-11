@@ -27,6 +27,7 @@ df.cache()
 #df.select("name", day("login_time").alias("day")).show()
 #df.select("name", date_add("login_time", 2).alias("after2days")).show()
 #df.select(date_diff(current_date(), "login_time").alias("differenceindays")).show()
-df.select(date_format("login_time", "dd-MM-yyyy").alias("formatted_date")).show()
+#df.select(date_format("login_time", "dd-MM-yyyy").alias("formatted_date")).show()
+df.select("name", to_date("login_time", "yyyy-MM-dd HH:mm:ss").alias("date_string")).show()
 
 
