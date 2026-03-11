@@ -20,3 +20,4 @@ columns = ["emp_id", "name", "department", "salary"]
 
 df = spark.createDataFrame(data, columns)
 df.cache()
+df.select(mean("salary")).show()
