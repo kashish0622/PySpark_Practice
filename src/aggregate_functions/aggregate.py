@@ -21,4 +21,5 @@ columns = ["emp_id", "name", "department", "salary"]
 df = spark.createDataFrame(data, columns)
 df.cache()
 #df.select(mean("salary")).show()
-df.select(avg("salary")).show()
+#df.select(avg("salary")).show()
+df.groupBy("department").agg(collect_list("name")).show(truncate=False)
